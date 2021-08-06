@@ -1,0 +1,144 @@
+body {
+    font-family: 'Roboto',sans-serif;
+    margin: 0;
+    background-color: #f7f7f7;
+}
+
+.header {
+    height: 280px;
+    padding: 50px 0 0 0;
+    background-image: -webkit-linear-gradient(top, rgba(7,61,92,1), rgba(0,151,227,0.70));
+}
+
+.header-title {
+    color: #FFFFFF;
+    font-size: 70px;
+    font-weight: bold;
+    text-align: left;
+    margin: 0 auto;
+    /* padding-left: 30px; */
+    text-align: center;
+}
+
+.header-description {
+    color: #f1f0f0;
+    margin: 4px auto;
+    text-align: left;
+    padding-top: 20px;
+    word-wrap: break-word;
+    width: 400px;
+    /* margin-left: 30px; */
+    text-align: center;
+    font-size: 15px;
+
+}
+
+/* #submit-button {
+    margin-left: 30px;
+    color:rgba(0, 0, 0, 0.18);
+    background-color: rgb(198, 219, 231);
+    
+} */
+
+
+
+#submit-button {
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    padding: .8em 1em calc(.8em + 3px);
+    border-radius: 5px;
+    background: #2ca6cf;
+    box-shadow: 0 -2px #2ca6cf inset;
+    font-size: 12px;
+    margin-left: 30px;
+  }
+
+#submit-button:hover { background: #1e738f; }
+
+#submit-button:active {
+    background: rgba(7,61,92,1);
+    box-shadow: 0 3px rgba(7,61,92,1) inset;
+  }
+
+#connect-button {
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    padding: .8em 1em calc(.8em + 3px);
+    border-radius: 5px;
+    background: #2ca6cf;
+    box-shadow: 0 -2px #2ca6cf inset;
+    font-size: 12px;
+    margin-left: 25px;
+  }
+
+#connect-button:hover { background: #1e738f; }
+
+#connect-button:active {
+    background: rgba(7,61,92,1);
+    box-shadow: 0 3px rgba(7,61,92,1) inset;
+  }
+
+#connect-button:hover:active {
+    background: rgba(7,61,92,1);
+    box-shadow: 0 3px rgba(7,61,92,1) inset;
+  }
+
+#speed-slider {
+    padding-top: 30px;
+}
+
+.wrapper {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1024px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-top: 32px;   
+}
+
+.card {
+    margin-bottom: 24px;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.18);
+}
+
+#game-simulation {
+    margin-bottom: 24px;
+    max-width: 1024px;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.18);
+    height: 500px;
+}
+
+.menu {
+    height: 112px;
+    width: 912px;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 24px;
+    /* margin: -40px 0 0 0; left-table*/
+    margin: -40px auto 0 auto;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.18);
+}
+
+.Select-control {
+    width: 256px;
+    height: 48px;
+}
+
+.Select--single > .Select-control .Select-value, .Select-placeholder {
+    line-height: 48px;
+}
+
+.Select--multi .Select-value-label {
+    line-height: 32px;
+}
+
+.menu-title {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #2ca6cf;
+    font-size: 15px;
+}
+
