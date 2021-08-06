@@ -20,7 +20,10 @@ tracking_file_list = glob.glob("data/*.json")
 tracking_files = [w.replace("data\\", "") for w in tracking_file_list]
 tracking_files = [s for s in tracking_files if "json" in s]
 
-cfg = Config()
+client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+SERVER = '10.3.168.135'
+PORT = 3000
+ADDR = (SERVER, PORT)
 
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.COSMO],
                 meta_tags=[{
@@ -28,7 +31,6 @@ app = dash.Dash(__name__, external_stylesheets=[dbc.themes.COSMO],
                 },
         ],
 )
-
 
 app.title = "PEERS"
 
@@ -117,17 +119,17 @@ app.layout = html.Div(
 )
 
 @app.callback(
-    Output("connect-output", "children"), Input("connect-button", "n_clicks"), Input(cfg))
+    Output("connect-output", "children"), Input("connect-button", "n_clicks"))
 
 def second_callback(n_clicks):
     if n_clicks is None:
         raise PreventUpdate
     else:
 
-        cfg.client.connect(cfg.ADDR)
+        client.connect(ADDR)
         while 1:
-            rcv_size = int.from_bytes(cfg.client.recv(4),'little')
-            print(cfg.client.recv(rcv_size).decode())
+            rcv_size = int.from_bytes(client.recv(4),'little')
+            print(client.recv(rcv_size).decode())
     return "True"
 
 @app.callback(
